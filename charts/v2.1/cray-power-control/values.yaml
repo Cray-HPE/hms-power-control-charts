@@ -7,8 +7,8 @@
 #   tag: "" (default = "latest")
 #   pullPolicy: "" (default = "IfNotPresent")
 global:
-  appVersion: 2.5.0
-  testVersion: 2.5.0
+  appVersion: 2.6.0
+  testVersion: 2.6.0
 
 tests:
   image:
@@ -120,6 +120,14 @@ cray-service:
           value: "20000"
         - name: EXPIRE_TIME_MINS
           value: "1440"
+        - name: PCS_STATUS_TIMEOUT
+          value: "30"
+        - name: PCS_STATUS_HTTP_RETRIES
+          value: "3"
+        - name: PCS_MAX_IDLE_CONNS
+          value: "4000"
+        - name: PCS_MAX_IDLE_CONNS_PER_HOST
+          value: "4"
       livenessProbe:
         httpGet:
           port: 28007
