@@ -130,6 +130,7 @@ cray-service:
           path: /v1/liveness
         initialDelaySeconds: 15
         periodSeconds: 5
+        timeoutSeconds: 2
       readinessProbe:
         httpGet:
           port: 28007
