@@ -116,6 +116,8 @@ cray-service:
             configMapKeyRef:
               name: cray-power-control-cacert-info
               key: CA_URI
+        - name: PCS_BASE_TRS_TASK_TIMEOUT
+          value: "40"
         - name: PCS_STATUS_TIMEOUT
           value: "30"
         - name: PCS_STATUS_HTTP_RETRIES
