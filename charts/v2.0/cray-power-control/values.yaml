@@ -7,8 +7,8 @@
 #   tag: "" (default = "latest")
 #   pullPolicy: "" (default = "IfNotPresent")
 global:
-  appVersion: 2.5.0
-  testVersion: 2.5.0
+  appVersion: 2.6.0
+  testVersion: 2.6.0
 
 tests:
   image:
@@ -116,12 +116,23 @@ cray-service:
             configMapKeyRef:
               name: cray-power-control-cacert-info
               key: CA_URI
+        - name: PCS_BASE_TRS_TASK_TIMEOUT
+          value: "40"
+        - name: PCS_STATUS_TIMEOUT
+          value: "30"
+        - name: PCS_STATUS_HTTP_RETRIES
+          value: "3"
+        - name: PCS_MAX_IDLE_CONNS
+          value: "4000"
+        - name: PCS_MAX_IDLE_CONNS_PER_HOST
+          value: "4"
       livenessProbe:
         httpGet:
           port: 28007
           path: /v1/liveness
         initialDelaySeconds: 15
         periodSeconds: 5
+        timeoutSeconds: 3
       readinessProbe:
         httpGet:
           port: 28007
