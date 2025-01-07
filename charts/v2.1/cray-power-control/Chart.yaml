@@ -17,4 +17,7 @@ maintainers:
     url: https://github.com/orgs/Cray-HPE/teams/hardware-management
 appVersion: 2.7.0
 annotations:
+  artifacthub.io/images: |-
+    - name: cray-power-control-pprof
+      image: artifactory.algol60.net/csm-docker/stable/cray-power-control-pprof:2.7.0
   artifacthub.io/license: "MIT"

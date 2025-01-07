@@ -14,12 +14,6 @@ tests:
   image:
     repository: artifactory.algol60.net/csm-docker/stable/cray-power-control-hmth-test
     pullPolicy: IfNotPresent
-
-pprof:
-  image:
-    repository: artifactory.algol60.net/csm-docker/stable/cray-power-control-pprof
-    pullPolicy: IfNotPresent
-
 cray-etcd-base:
   nameOverride: "cray-power-control"
   fullnameOverride: "cray-power-control"
