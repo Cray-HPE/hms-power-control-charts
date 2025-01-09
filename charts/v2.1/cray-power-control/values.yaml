@@ -130,6 +130,14 @@ cray-service:
           value: "4000"
         - name: PCS_MAX_IDLE_CONNS_PER_HOST
           value: "4"
+        - name: ETCD_DISABLE_SIZE_CHECKS
+          value: "false"
+        - name: ETCD_PAGE_SIZE
+          value: "5000"
+        - name: ETCD_MAX_OBJECT_SIZE
+          value: "1570000"
+        - name: MAX_TRANSITION_MESSAGE_LENGTH
+          value: "130"
       livenessProbe:
         httpGet:
           port: 28007
