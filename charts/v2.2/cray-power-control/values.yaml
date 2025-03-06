@@ -7,8 +7,8 @@
 #   tag: "" (default = "latest")
 #   pullPolicy: "" (default = "IfNotPresent")
 global:
-  appVersion: 2.9.0
-  testVersion: 2.9.0
+  appVersion: 2.10.0
+  testVersion: 2.10.0
 
 tests:
   image:
