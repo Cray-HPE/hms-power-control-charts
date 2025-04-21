@@ -1,6 +1,6 @@
 apiVersion: v2
 name: "cray-power-control"
-version: 2.2.1
+version: 2.2.2
 description: "Kubernetes resources for cray-power-control"
 home: "https://github.com/Cray-HPE/hms-power-control-charts"
 sources:
@@ -15,9 +15,9 @@ dependencies:
 maintainers:
   - name: Hardware Management
     url: https://github.com/orgs/Cray-HPE/teams/hardware-management
-appVersion: 2.10.0  # update pprof image version below as well
+appVersion: 2.11.0  # update pprof image version below as well
 annotations:
   artifacthub.io/images: |-
     - name: cray-power-control-pprof
-      image: artifactory.algol60.net/csm-docker/stable/cray-power-control-pprof:2.10.0
+      image: artifactory.algol60.net/csm-docker/stable/cray-power-control-pprof:2.11.0
   artifacthub.io/license: "MIT"
